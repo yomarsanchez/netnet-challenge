@@ -169,6 +169,9 @@ button:focus {
 .movie-list__item:not(:last-child) {
   margin-right: 8px;
 }
+.movie-list__item:last-child {
+  margin-right: 16px;
+}
 
 /* Footer */
 .footer {
