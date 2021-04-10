@@ -155,13 +155,13 @@ a {
 }
 
 .icon-add::before {
-  background-image: url("/images/icons/plus.svg");
+  background-image: url("./../images/icons/plus.svg");
 }
 .icon-play::before {
-  background-image: url("/images/icons/play.svg");
+  background-image: url("./../images/icons/play.svg");
 }
 .icon-info::before {
-  background-image: url("/images/icons/info.svg");
+  background-image: url("./../images/icons/info.svg");
 }
 
 /* Credits */
