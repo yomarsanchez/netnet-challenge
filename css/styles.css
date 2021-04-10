@@ -1,4 +1,8 @@
 :root {
+  --font-avenir-next: "Avenir Next LT Pro";
+  --regular: 400;
+  --medium: 600;
+  --bold: 700;
   --primary: #000000;
   --secondary: #d22f26;
   --light: #ffffff;
@@ -9,7 +13,7 @@ body {
   background: var(--primary);
   color: var(--light);
   margin: 0;
-  font-family: "Avenir Next LT Pro";
+  font-family: "Avenir Next LT Pro", Arial, Helvetica, sans-serif;
   font-size: 14px;
 }
 
@@ -46,6 +50,12 @@ a {
   list-style: none;
   text-align: center;
 }
+.navigation-item a {
+  color: var(--light);
+  font-size: 14px;
+  font-weight: var(--regular);
+  line-height: 24px;
+}
 
 /* Hero */
 .hero {
@@ -57,8 +67,8 @@ a {
   background-image: linear-gradient(
     to top,
     var(--primary) 0%,
-    var(--primary) 30%,
-    rgba(0, 0, 0, 0.5) 60%,
+    var(--primary) 25%,
+    rgba(0, 0, 0, 0.5) 35%,
     transparent 100%
   );
   text-align: center;
@@ -67,17 +77,28 @@ a {
   left: 0;
   right: 0;
 }
+.hero-details .title img {
+  margin-bottom: 12px;
+}
+.hero-details .title img {
+  width: 312px;
+}
 .hero-details .tags {
   display: flex;
   justify-content: center;
   gap: 8px;
   list-style: none;
   padding: 0;
-  font-size: 0.8rem;
+  color: var(--light);
+  font-size: 0.8em;
+  font-weight: var(--regular);
+  line-height: 15.3px;
+  margin: 0;
+  margin-bottom: 15px;
 }
 .hero-details .tags .tags-item::before {
   content: "•";
-  margin-right: 8px;
+  margin-right: 4px;
 }
 .hero-details .tags .tags-item:first-child:before {
   display: none;
@@ -89,15 +110,58 @@ a {
   padding-bottom: 1em;
 }
 
+/* Button */
 .button {
   background-color: var(--light);
   color: var(--primary);
-  padding: 10px 16px;
+  border: none;
   border-radius: 2px;
-  border: 0;
+  font-family: var(--font-avenir-next);
+  font-size: 0.8em;
+  font-weight: var(--medium);
+  font-style: normal;
+  line-height: 15.3px;
+  cursor: pointer;
+}
+.button:focus {
+  outline: none;
+}
+.button.button-primary {
+  display: flex;
+  align-items: center;
+  padding: 4px 16px;
+  position: relative;
+  overflow: hidden;
+}
+.button.button-primary::before {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin-right: 4px;
 }
 .button.button-outline {
-  border: 1px solid rgb(0, 255, 234);
+  background-color: transparent;
+  color: var(--light);
+  min-width: 50px;
+}
+.button.button-outline::before {
+  content: "";
+  display: block;
+  width: 24px;
+  height: 24px;
+  margin: auto;
+  margin-bottom: 6px;
+}
+
+.icon-add::before {
+  background-image: url("/images/icons/plus.svg");
+}
+.icon-play::before {
+  background-image: url("/images/icons/play.svg");
+}
+.icon-info::before {
+  background-image: url("/images/icons/info.svg");
 }
 
 /* Credits */
