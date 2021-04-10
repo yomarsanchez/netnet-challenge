@@ -20,6 +20,22 @@ body {
 a {
   color: var(--light);
   text-decoration: none;
+  cursor: pointer;
+}
+
+.wrapper {
+  padding: 0 16px;
+}
+
+ul {
+  list-style: none;
+  margin-block: 0;
+  margin-inline: 0;
+  padding-inline: 0;
+}
+
+button:focus {
+  outline: none;
 }
 
 /* Header */
@@ -59,7 +75,7 @@ a {
 
 /* Hero */
 .hero {
-  margin-top: -140px;
+  margin-top: -215px;
   position: relative;
   overflow: hidden;
 }
@@ -110,6 +126,98 @@ a {
   padding-bottom: 1em;
 }
 
+@media (min-width: 375px) {
+  .hero {
+    margin-top: -180px;
+  }
+}
+
+/* Movie Section */
+.main {
+  padding: 30px 0 50px;
+}
+.movie-list {
+  padding: 8px 0 8px 16px;
+}
+.movie-list__header {
+  margin-bottom: 8px;
+}
+.movie-list__header .title {
+  color: var(--light);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: var(--bold);
+  line-height: 24px;
+  margin-block: 0;
+  margin-inline: 0;
+}
+.movie-list__content {
+  white-space: nowrap;
+  overflow-x: auto;
+}
+.movie-list__content::-webkit-scrollbar {
+  display: none;
+}
+.movie-list__item {
+  display: inline-block;
+}
+.movie-list__item img {
+  width: 96px;
+  height: 144px;
+  border-radius: 2px;
+}
+.movie-list__item:not(:last-child) {
+  margin-right: 8px;
+}
+
+/* Footer */
+.footer {
+  background-color: var(--primary);
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.footer-content {
+  height: 64px;
+}
+.footer-content nav {
+  height: 100%;
+}
+.footer-navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 100%;
+}
+.footer-navigation__item {
+  flex: 1 1 25%;
+  max-width: 25%;
+}
+.footer-navigation__item .btn {
+  width: 100%;
+  height: 64px;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+}
+.footer-navigation__item .btn svg path {
+  fill: var(--gray);
+}
+.footer-navigation__item .btn.active svg path {
+  fill: var(--light);
+}
+.footer-navigation__item .btn span {
+  font-family: var(--font-avenir-next);
+  color: var(--gray);
+  font-size: 0.8em;
+  font-weight: var(--regular);
+  line-height: 15.3px;
+}
+.footer-navigation__item .btn.active span {
+  color: var(--light);
+}
+
 /* Button */
 .button {
   background-color: var(--light);
@@ -122,9 +230,6 @@ a {
   font-style: normal;
   line-height: 15.3px;
   cursor: pointer;
-}
-.button:focus {
-  outline: none;
 }
 .button.button-primary {
   display: flex;
